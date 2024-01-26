@@ -5,10 +5,10 @@ const Try = () => {
   return (
     <div>
       <div>
-        <img src={ErrorState} alt="heheh" />
+        <img src={ErrorState} alt="cartoon illustration of a green bird with a green mailbox" />
         {/* <img src={ErrorState} alt="" /> */}
-        {/* <img src={ErrorState} /> */}
-        <img />
+        <img src={ErrorState} alt="cartoon illustration of a green bird with a green mailbox" />
+        {/* <img /> */}
       </div>
     </div>
   );

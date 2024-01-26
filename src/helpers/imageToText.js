@@ -5,8 +5,6 @@ export default async function imageToText(image) {
   try {
     async function query(filename) {
       const gitSpinner = ora("generating text from image ...").start();
-      // let data = await fetch(filename);
-      // let fimgb = Buffer.from(await data.arrayBuffer());
       const response = await fetch(
         "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large",
         {
@@ -22,10 +20,8 @@ export default async function imageToText(image) {
       return result;
     }
 
-    query(image).then(response => {
-      console.log(response);
-      return JSON.stringify(response[0].generated_text);
-    });
+    const response = await query(image);
+    return JSON.stringify(response[0].generated_text);
   } catch (error) {
     console.log(error);
   }

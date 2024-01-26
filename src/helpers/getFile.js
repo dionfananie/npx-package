@@ -10,7 +10,6 @@ export default function getFile(linkFile, linkImage) {
 
   const newPath = [...filePathArr, ...fileArr];
   const newimg = newPath.join("/");
-  console.log(newPath.join("/"));
   return newimg;
 }
 
