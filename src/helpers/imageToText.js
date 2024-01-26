@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import ora from "ora";
 
-const imageToText = image => {
+export default async function imageToText(image) {
   try {
     async function query(filename) {
       const gitSpinner = ora("generating text from image ...").start();
@@ -14,7 +14,7 @@ const imageToText = image => {
             Authorization: "Bearer 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",
           },
           method: "POST",
-          body: image,
+          body: filename,
         },
       );
       gitSpinner.succeed();
@@ -22,13 +22,11 @@ const imageToText = image => {
       return result;
     }
 
-    query(inputLink).then(response => {
-      console.log(JSON.stringify(response[0].generated_text));
+    query(image).then(response => {
+      console.log(response);
       return JSON.stringify(response[0].generated_text);
     });
   } catch (error) {
     console.log(error);
   }
-};
-
-module.exports = imageToText;
+}
