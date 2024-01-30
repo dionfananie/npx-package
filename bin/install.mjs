@@ -26,6 +26,6 @@ try {
   fs.writeFileSync(trimLink, htmlTag);
   gitSpinner.succeed("Done!");
 } catch (error) {
-  gitSpinner.error();
+  // gitSpinner.error();
   console.log(error);
 }

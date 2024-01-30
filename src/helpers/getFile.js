@@ -12,5 +12,3 @@ export default function getFile(linkFile, linkImage) {
   const newimg = newPath.join("/");
   return newimg;
 }
-
-// module.exports = getFile;
