@@ -6,9 +6,9 @@ const Try = () => {
   return (
     <div>
       <div>
-        <img src={ErrorState} alt="cartoon illustration of a green bird with a green mailbox" />
+        <img src={ErrorState} alt="product 1" />
         {/* <img src={ErrorState} alt="" /> */}
-        <img src={EmptySearch} alt="a cartoon image of a bird and a rabbit on a stage" />
+        <img src={EmptySearch} alt="product 2" />
         {/* <img /> */}
       </div>
     </div>
